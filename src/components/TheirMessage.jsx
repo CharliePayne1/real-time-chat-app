@@ -1,6 +1,5 @@
 const TheirMessage = ({lastMessage, message}) => {
     const isFirstMessageByUSer = !lastMessage || lastMessage.sender.user !== message.sender.username
-    console.log('their message', message)
     return (
         <div className="message-row">
             {isFirstMessageByUSer && (

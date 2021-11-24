@@ -3,7 +3,7 @@ import MyMessage from "./MyMessage";
 import TheirMessage from "./TheirMessage";
 
 const ChatFeed = (props) => {
-    const { chats, activeChat, userName, messages } = props
+    const { chats, activeChat, userName, messages, logout } = props
     
     const chat = chats && chats[activeChat]
 
@@ -20,10 +20,8 @@ const ChatFeed = (props) => {
     
     const renderMessages = () => {
         const keys = Object.keys(messages)
-        console.log('messages', keys)
         
         return keys.map((key, index) => {
-            console.log('key', key)
             const message = messages[key];
             const lastMessageKey = index === 0 ? null : keys[index - 1];
             const isMyMessage = userName === message.sender.username
@@ -44,8 +42,6 @@ const ChatFeed = (props) => {
         })
     }
 
-    renderMessages();
-
     if (!chat) return 'Loading...'
 
     return (
@@ -57,6 +53,8 @@ const ChatFeed = (props) => {
                 <div>
                     {chat.people.map(person => `${person.person.username}`)}
                 </div>
+                <button onClick={(e) => logout(e)}>Logout</button>
+                <a href="mailto:charliepayne1101@gmail.com" target="_blank" rel="noreferrer">Email Me</a>
             </div>
             < div className="">
             {renderMessages()}

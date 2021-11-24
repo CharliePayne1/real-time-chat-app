@@ -6,7 +6,7 @@ const MessageForm = (props) => {
     const [value, setValue] = useState('')
     const { chatId, creds } = props
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const text = value.trim();
