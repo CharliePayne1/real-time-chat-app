@@ -294,3 +294,10 @@
     text-align: center;
     margin-top: 20px;
   }
+
+  .emailIcon {
+    max-width: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }

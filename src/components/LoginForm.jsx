@@ -32,6 +32,7 @@ const LoginForm = () => {
     }
 
     return (
+    <>
         <div className="wrapper">
             <div className="form">
                 <h1 className="title">Charlie's Chat Application</h1>
@@ -46,7 +47,11 @@ const LoginForm = () => {
                     <div className="error">{error}</div>
                 </form>
             </div>
+            <a href="mailto:charliepayne1101@gmail.com" target="_blank" rel="noreferrer">
+                <img src="https://cdn.icon-icons.com/icons2/2751/PNG/512/email_icon_176156.png" alt="email_icon" className="emailIcon"/>
+            </a>
         </div>
+    </>
     )
 }
 

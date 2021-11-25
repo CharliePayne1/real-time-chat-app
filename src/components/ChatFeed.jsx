@@ -54,7 +54,6 @@ const ChatFeed = (props) => {
                     {chat.people.map(person => `${person.person.username}`)}
                 </div>
                 <button onClick={(e) => logout(e)}>Logout</button>
-                <a href="mailto:charliepayne1101@gmail.com" target="_blank" rel="noreferrer">Email Me</a>
             </div>
             < div className="">
             {renderMessages()}
